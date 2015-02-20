@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="kappavision">
+<head>
+  <title>KappaVision</title>
+  <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+  <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js" type="text/javascript"></script>
+  <script src="src/app.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+  <link rel="stylesheet" href="src/main.css"/>
+</head>
+<body layout="column">
+
+<md-toolbar layout="row">
+  <div class="md-toolbar-tools">
+    <h3>KappaVision</h3>
+  </div>
+</md-toolbar>
+
+<div layout="column" layout-margin class="main-content">
+  <div ng-controller="TestController">
+    <md-input-container>
+      <label>Name</label>
+      <input ng-model="helloName" placeholder="Name">
+    </md-input-container>
+    <h4>{{helloPrefix}} {{helloName}}!</h4>
+  </div>
+  <div flex layout="row">
+    <img src="img/Kappa.png" class="md-shadow-bottom-z-1" style="height: 200px;"/>
+    <img src="img/Kappa.png" class="md-shadow-bottom-z-1" style="height: 200px;"/>
+    <img src="img/Kappa.png" class="md-shadow-bottom-z-1" style="height: 200px;"/>
+  </div>
+</div>
+
+</body>
+</html>

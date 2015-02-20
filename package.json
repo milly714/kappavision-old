@@ -1,0 +1,32 @@
+{
+  "name": "kappavision",
+  "version": "0.0.1",
+  "description": "Twitch desktop viewing experience",
+  "main": "browser/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Obeythecreed/kappavision.git"
+  },
+  "keywords": [
+    "twitch",
+    "kappa"
+  ],
+  "author": "Obeythecreed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Obeythecreed/kappavision/issues"
+  },
+  "homepage": "https://github.com/Obeythecreed/kappavision",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-build-atom-shell": "~1.1.5",
+    "grunt-download-atom-shell": "~0.12.0",
+    "grunt-shell": "~1.1.1",
+    "grunt-ts": "~3.0.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-less": "~1.0.0"
+  },
+  "dependencies": {
+    "express": "~4.11.2"
+  }
+}
