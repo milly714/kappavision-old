@@ -14,6 +14,9 @@ module.exports = function (grunt) {
     shell: {
       runWindows: {
         command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 ./"
+      },
+      runOSX: {
+        command: "./build/atom-shell-prebuilt/Atom.app/Contents/MacOS/Atom --remote-debugging-port=9999 ./"
       }
     },
     ts: {
