@@ -23,6 +23,21 @@ app.config(function($mdThemingProvider) {
         })
 });
 
+app.controller('SideBarController', function($scope, $mdSidenav, $log) {
+   $scope.$on('toggleLeft', function() {
+       $scope.toggleLeft();
+   });
+   $scope.toggleLeft = function() {
+       $mdSidenav('left').toggle();
+   }
+});
+
+app.controller('MainContentController', function($scope, $log) {
+    $scope.toggleLeft = function() {
+        $scope.$broadcast('toggleLeft');
+    }
+});
+
 app.controller('TestController', ($scope:TestScope) => {
   $scope.helloPrefix = 'Hello';
   $scope.helloName = 'World';

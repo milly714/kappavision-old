@@ -19,7 +19,7 @@ app.on('window-all-closed', function () {
 
 app.on('ready', function () {
   var server = expSrv.listen(15257, function () {
-    mainWindow = new BrowserWindow({width: 800, height: 600, frame: false});
+    mainWindow = new BrowserWindow({width: 950, height: 550, frame: false});
 
     //var index = 'file://' + __dirname + '/client/index.html';
     //this is dumb, there's gotta be a better way
