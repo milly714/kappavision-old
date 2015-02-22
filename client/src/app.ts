@@ -18,10 +18,8 @@ app.config(function($mdThemingProvider) {
 
     $mdThemingProvider.theme('default')
         .primaryPalette('twitchPurple', {
-            'default': '500'
-        })
-        .accentPalette('twitchPurple', {
-            'default': '300'
+            'default': '500',
+            'hue-1': '300'
         })
 });
 
