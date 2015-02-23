@@ -4,22 +4,39 @@
 
 .header {
   .logo {
-    height: 40px;
-    background-color: transparent;
+    cursor:pointer;
+    img {
+      height: 40px;
+    }
+    div {
+      position: relative;
+      top: -10px;
+      display: inline-block;
+    }
   }
   .app-name {
     margin: 0;
     position: absolute;
-    top: 18%;
+    top: 8px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
 .no-drag {
   -webkit-app-region: no-drag;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.left-nav {
+  top: 64px;
 }
 
 // Main Color: 6441A5 || (100, 65, 165)

@@ -1,0 +1,2 @@
+Getting user info from chat
+    http://discuss.dev.twitch.tv/t/accessing-chat-information/307/7
