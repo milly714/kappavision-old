@@ -15,12 +15,6 @@ app.config(function($mdThemingProvider) {
     });
 
     $mdThemingProvider.definePalette('twitchPurple', twitchPurpleMap);
-
-    $mdThemingProvider.theme('default')
-        .primaryPalette('twitchPurple', {
-            'default': '500',
-            'hue-1': '300'
-        })
 });
 
 app.controller('SideBarController', function($scope, $mdSidenav, $log) {
