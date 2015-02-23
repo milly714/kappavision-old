@@ -13,13 +13,23 @@ module.exports = function (grunt) {
     },
     shell: {
       runWindows: {
-        command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 ./"
+        command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 --help ./"
+      },
+      debugWindows: {
+        command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 --debug-brk=5858 ./"
       },
       runOSX: {
         command: "./build/atom-shell-prebuilt/Atom.app/Contents/MacOS/Atom --remote-debugging-port=9999 ./"
       }
     },
     ts: {
+      browser: {
+        options: {
+          module: "commonjs"
+        },
+        src: ['browser/**/*.ts'],
+        dest: 'browser/main.js'
+      },
       client: {
         src: ['client/src/**/*.ts', 'client/defs/*.d.ts'],
         dest: 'client/src/app.js'
@@ -32,6 +42,10 @@ module.exports = function (grunt) {
       }
     },
     watch: {
+      browserTS: {
+        files: ['browser/**/*.ts'],
+        tasks: ['ts:browser']
+      },
       clientTS: {
         files: ['client/src/**/*.ts', 'client/defs/*.d.ts'],
         tasks: ['ts:client']

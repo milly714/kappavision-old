@@ -9,4 +9,5 @@ client/bower_components
 client/src/app.js
 client/src/app.js.map
 client/src/main.css
-
+browser/main.js
+browser/main.js.map

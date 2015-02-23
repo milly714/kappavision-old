@@ -27,6 +27,8 @@
     "grunt-contrib-less": "~1.0.0"
   },
   "dependencies": {
-    "express": "~4.11.2"
+    "express": "~4.11.2",
+    "open": "0.0.5",
+    "restler": "~3.2.2"
   }
 }

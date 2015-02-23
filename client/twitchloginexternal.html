@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+</head>
+<body>
+
+<script>
+  var req = new XMLHttpRequest();
+  req.open("GET", "/token?" + location.hash.substr(1), true);
+  req.send();
+  setTimeout(function() {
+    //TODO: less hacky
+      window.close();
+  }, 100);
+</script>
+
+<h1>Successfully logged in. You can close this window/tab.</h1>
+
+</body>
+</html>

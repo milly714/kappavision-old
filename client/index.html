@@ -1,59 +1,42 @@
 <!DOCTYPE html>
 <html ng-app="kappavision">
 <head>
-    <title>KappaVision v.0.0.0.0.0.0.0.0.0</title>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-    <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="src/app.js"></script>
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
-    <link rel="stylesheet" href="src/main.css"/>
+  <title>KappaVision v.0.0.0.0.0.0.0.0.0</title>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="src/app.js"></script>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+  <link rel="stylesheet" href="src/main.css"/>
 </head>
 <body layout="column">
 
 <md-toolbar class="header" style="-webkit-app-region: drag" layout="row">
-    <div class="md-toolbar-tools">
+  <div class="md-toolbar-tools">
         <span class="no-drag no-select logo" onclick="location.reload()">
             <img src="img/Kappa.png" draggable="false"/>
             <div>Vision</div>
         </span>
 
-        <h3 class="app-name">Kappa Vision v.0.0.0.0.0.0.0.0.0</h3>
-    </div>
+    <h3 class="app-name">Kappa Vision v.0.0.0.0.0.0.0.0.0</h3>
+  </div>
 </md-toolbar>
 
-<div layout="row" layout-margin class="main-content">
-    <div ng-controller="MainContentController">
-        <div layout="column" ng-controller="SideBarController">
-            <md-sidenav class="md-sidenav-left md-shadow-bottom-z-1 left-nav" md-component-id="left" md-is-locked-open="$media('gt-md')">
-                Left Nav!
-            </md-sidenav>
-        </div>
-
-        <md-content>
-            <md-button ng-click="toggleLeft()">
-                Open Left Menu
-            </md-button>
-        </md-content>
+<div layout="row" flex layout-margin class="main-content">
+  <div ng-controller="MainContentController">
+    <div layout="column" ng-controller="SideBarController">
+      <md-sidenav class="md-sidenav-left md-shadow-bottom-z-1 left-nav" md-component-id="left"
+                  md-is-locked-open="$media('gt-md')">
+        Left Nav!
+      </md-sidenav>
     </div>
+    <md-content>
+      <div ng-view></div>
+    </md-content>
+  </div>
 </div>
 
-
-<!--<div layout="column" layout-margin class="main-content">-->
-<!--<div ng-controller="TestController">-->
-<!--<md-input-container>-->
-<!--<label>Name</label>-->
-<!--<input ng-model="helloName" placeholder="Name">-->
-<!--</md-input-container>-->
-<!--<h4>{{helloPrefix}} {{helloName}}!</h4>-->
-<!--</div>-->
-<!--<div flex layout="row">-->
-<!--<img src="img/Kappa.png" class="md-shadow-bottom-z-1" style="height: 150px;"/>-->
-<!--<img src="img/Kappa.png" class="md-shadow-bottom-z-1" style="height: 150px;"/>-->
-<!--<img src="img/Kappa.png" class="md-shadow-bottom-z-1" style="height: 150px;"/>-->
-<!--</div>-->
-<!--</div>-->
 </body>
 </html>
