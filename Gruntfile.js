@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     },
     shell: {
       runWindows: {
-        command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 --help ./"
+        command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 ./"
       },
       debugWindows: {
         command: ".\\build\\atom-shell-prebuilt\\atom --remote-debugging-port=9999 --debug-brk=5858 ./"
