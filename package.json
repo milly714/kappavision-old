@@ -2,7 +2,7 @@
   "name": "kappavision",
   "version": "0.0.1",
   "description": "Twitch desktop viewing experience",
-  "main": "browser/main.js",
+  "main": "bin/browser/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Obeythecreed/kappavision.git"

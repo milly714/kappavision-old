@@ -1,15 +1,17 @@
 /// ts:ref=node.d.ts
 /// <reference path="./defs/node.d.ts"/> ///ts:ref:generated
 /// ts:ref=Twitch.ts
-/// <reference path="./Twitch.ts"/> ///ts:ref:generated
+/// <reference path="./twitch/Twitch.ts"/> ///ts:ref:generated
 /// ts:ref=TwitchIRC.ts
-/// <reference path="./TwitchIRC.ts"/> ///ts:ref:generated
-
-console.log("ALdJKL;kfjalsdjflkajsdf");
+/// No file or directory matched name "TwitchIRC.ts" ///ts:ref:generated
+/// ts:ref=tirc.ts
+/// <reference path="./tirc/tirc.ts"/> ///ts:ref:generated
 
 var app:any = require('app');
 var BrowserWindow:any = require('browser-window');
 var fs = require('fs');
+
+import twitch = require("./twitch/twitch");
 
 // Maybe enable crash reporting later or something
 // require('crash-reporter').start();
@@ -25,7 +27,7 @@ try {
     //Don't care!
 }
 
-var twitchSession = new twitch.Twitch(dataPath, () => mainWindow.loadUrl('http://127.0.0.1:15257/index.html'));
+var twitchSession = new twitch.twitch.Twitch(dataPath, () => mainWindow.loadUrl('http://127.0.0.1:15257/index.html'));
 
 var express:any = require('express');
 var expSrv = express();
@@ -59,7 +61,6 @@ app.on('window-all-closed', function () {
     if (process.platform != 'darwin')
         app.quit();
 });
-
 
 app.on('ready', function () {
     var server = expSrv.listen(15257, function () {

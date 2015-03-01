@@ -1,7 +1,11 @@
 /// ts:ref=node.d.ts
-/// <reference path="./defs/node.d.ts"/> ///ts:ref:generated
+/// <reference path="../defs/node.d.ts"/> ///ts:ref:generated
+/// ts:ref=tirc.ts
+/// <reference path="../tirc/tirc.ts"/> ///ts:ref:generated
 
-module twitch {
+import tirc = require("../tirc/tirc");
+
+export module twitch {
     export class Twitch {
         constructor(dataPath:string, reload:() => void) {
             this.dataPath = dataPath;
@@ -22,6 +26,7 @@ module twitch {
         private reload:()=>void;
         private user:string = undefined;
         private oauth:string = undefined;
+        private irc:tirc.tirc.TIRC = undefined;
         //private https = require('https');
         private restler:any = require('restler');
 

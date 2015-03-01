@@ -28,7 +28,7 @@ module.exports = function (grunt) {
           module: "commonjs"
         },
         src: ['browser/**/*.ts'],
-        dest: 'browser/main.js'
+        outDir: 'bin/browser/'
       },
       client: {
         src: ['client/src/**/*.ts', 'client/defs/*.d.ts'],
